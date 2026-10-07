@@ -56,7 +56,13 @@ function FlowArt({ seed, accent }: { seed: number; accent: string }) {
 function ProjectCard({ p, index, wide }: { p: Project; index: number; wide: "" | "start" | "end" }) {
   const num = String(index + 1).padStart(2, "0");
   const meta = [p.year, p.area].filter(Boolean).join(" · ");
-  const isRepo = /github\.com/.test(p.url);
+  const destinations = p.links
+    ? [
+        { label: "Website", href: p.links.website },
+        { label: "Demo", href: p.links.demo },
+        { label: "GitHub", href: p.links.github },
+      ]
+    : [{ label: /github\.com/.test(p.url ?? "") ? "GitHub" : "Website", href: p.url }];
   return (
     <article className={`proj${wide ? " proj--featured" : ""}${wide === "end" ? " proj--flip" : ""}`} style={{ "--a": p.accent } as React.CSSProperties}>
       <div className={`proj-media${p.image ? " proj-media--shot" : ""}`}>
@@ -88,15 +94,19 @@ function ProjectCard({ p, index, wide }: { p: Project; index: number; wide: "" |
             <li key={t}>{t}</li>
           ))}
         </ul>
-        {p.url ? (
-          <a className="proj-btn" href={p.url} target="_blank" rel="noopener">
-            {isRepo ? "View on GitHub" : "Visit website"} <span aria-hidden="true">↗</span>
-          </a>
-        ) : (
-          <span className="proj-btn proj-btn--soon" aria-disabled="true">
-            Link coming soon
-          </span>
-        )}
+        <div className="proj-links">
+          {destinations.map(({ label, href }) =>
+            href ? (
+              <a key={label} className="proj-link" href={href} target="_blank" rel="noopener noreferrer">
+                {label} <span aria-hidden="true">↗</span>
+              </a>
+            ) : (
+              <span key={label} className="proj-link proj-link--soon" aria-disabled="true">
+                {label} soon
+              </span>
+            ),
+          )}
+        </div>
       </div>
     </article>
   );

@@ -1,7 +1,7 @@
 export const site = {
   name: "Agorua Chikaodi",
   role: "Software & AI Automation Engineer",
-  email: "you@example.com",
+  email: "agorua.kody@gmail.com",
   year: 2026,
 };
 
@@ -14,8 +14,8 @@ export const navLinks = [
 
 export const socials = [
   { href: "https://www.linkedin.com/in/chikaodi-agorua-74478b20a/", label: "LinkedIn" },
-  { href: "https://github.com/kodycodes23/", label: "GitHub" },
-  { href: "https://chikaodinakacv.tiiny.site", label: "Curriculum Vitae" },
+  { href: "https://github.com/kodycodes23", label: "GitHub" },
+  { href: "/projects/Chikaodinaka_Resume_WS.pdf", label: "Curriculum Vitae" },
 ];
 
 export const about = {
@@ -33,8 +33,14 @@ export type Project = {
   type: "Automation" | "AI agent" | "Web app";
   description: string;
   tools: string[];
-  /** live website or repo; GitHub links get a "View on GitHub" button. Leave empty for "Link coming soon" */
-  url: string;
+  /** Legacy single destination for existing projects. */
+  url?: string;
+  /** Separate destinations for projects with a live site, demo, and source repository. */
+  links?: {
+    website?: string;
+    demo?: string;
+    github?: string;
+  };
   /** screenshot in /public/projects; without one the card shows a generated workflow preview */
   image?: string;
   /** preview glow color */
@@ -47,6 +53,62 @@ export type Project = {
 
 // the first project is shown as the large featured card
 export const work: Project[] = [
+  {
+    title: "RelayPay Voice Support",
+    type: "AI agent",
+    description:
+      "A voice-based support agent that answers from approved knowledge, looks up customer and payment records, and escalates sensitive cases for human review.",
+    tools: ["Vapi", "Claude Agent SDK", "MCP", "Supabase", "Next.js"],
+    links: {
+      website: "http://web-tan-five-65.vercel.app",
+      demo: "https://yorecord.com/view?uid=23848650-55b1-46b1-b77b-bb0cf2604ae4",
+      github: "https://github.com/kodycodes23/koya-support-agent",
+    },
+    image: "/projects/relaypay-voice-support-v2.png",
+    accent: "#18A999",
+  },
+  {
+    title: "Koya Proposal Generator",
+    type: "AI agent",
+    description:
+      "Generates client proposals with Claude, supports salesperson review and internal approval, then prepares delivery and logs each proposal centrally.",
+    tools: ["Claude API", "Next.js", "Proposal generation", "Approval workflow"],
+    links: {
+      website: "https://koya-proposal-generator.vercel.app/",
+      demo: "https://yorecord.com/view?uid=da565625-f384-4c15-84ca-b1c67c69b554",
+      github: "https://github.com/kodycodes23/Koya-Proposal-Generator",
+    },
+    image: "/projects/koya-proposal-generator-v2.png",
+    accent: "#D08A42",
+  },
+  {
+    title: "Koya Content Agent",
+    type: "AI agent",
+    description:
+      "Researches a content idea, drafts and evaluates an article, then adapts the selected version for LinkedIn, X, and email review.",
+    tools: ["AI research", "Next.js", "n8n", "Claude", "LinkedIn · X · Email"],
+    links: {
+      website: "https://contentgenerator-mocha.vercel.app/",
+      demo: "https://yorecord.com/view?uid=abbaab2b-a05f-40b2-9db1-162b3daab4ed",
+      github: "https://github.com/kodycodes23/content_generator",
+    },
+    image: "/projects/koya-content.png",
+    accent: "#D45D79",
+  },
+  {
+    title: "Radar Lead Agent",
+    type: "AI agent",
+    description:
+      "Researches companies against a lead objective, saves qualified prospects to Supabase, and prepares outreach drafts for human review.",
+    tools: ["AI research", "Apify", "Next.js", "Claude", "Supabase", "Lead qualification"],
+    links: {
+      website: "https://radar-lead-generator.onrender.com/",
+      demo: "https://yorecord.com/view?uid=437fa97f-b895-4ec4-b283-b9e9f69e7ef5",
+      github: "https://github.com/kodycodes23/Radar-Lead-Generator",
+    },
+    image: "/projects/radar-lead-generator-wide.png",
+    accent: "#4B91A8",
+  },
   {
     title: "Quantum Health Frontend",
     type: "Web app",
@@ -136,11 +198,11 @@ export const steps = [
 
 /** Alternating [tools, muted suffix] pairs for the "Tools I build with" sentence. */
 export const stack: [string, string][] = [
-  ["n8n, Make and Zapier", "for workflows."],
+  ["n8n, Power Automate and UiPath", "for workflows."],
   ["OpenAI, Claude and LangChain", "for AI steps and agents."],
   ["Python and JavaScript", "for everything custom."],
   [
-    "HubSpot, Airtable, Notion, Slack and Google Workspace",
+    "Airtable, Notion, Slack and Google Workspace",
     "for the places work already lives.",
   ],
 ];
