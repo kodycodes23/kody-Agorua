@@ -34,9 +34,9 @@ const ORBITS: { rx: number; ry: number; speed: number; logos: Logo[] }[] = [
     speed: -0.26,
     logos: [
       file("Google", "/logos/google.svg", "#EA4335"),
-      file("Apollo", "/logos/apollo.png", "#E9F00F"),
+      file("Apollo", "/logos/apollo.webp", "#E9F00F"),
       file("Python", "/logos/python.svg", "#3776AB"),
-      file("Firecrawl", "/logos/firecrawl.png", "#FA5D19"),
+      file("Firecrawl", "/logos/firecrawl.webp", "#FA5D19"),
       logo(siNotion, IVORY),
     ],
   },

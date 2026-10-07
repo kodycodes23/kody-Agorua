@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import Nav from "@/components/Nav";
 import Hero from "@/components/Hero";
 import Work from "@/components/Work";
@@ -47,14 +46,17 @@ export default function Home() {
         <section className="block" id="stack" style={{ paddingTop: 0 }}>
           <div className="wrap">
             <h2 className="sec-title">Tools I build with</h2>
-            <p className="stack">
-              {stack.map(([tools, suffix], i) => (
-                <Fragment key={tools}>
-                  {i > 0 && " "}
-                  {tools} <span>{suffix}</span>
-                </Fragment>
+            <div className="stack-grid">
+              {stack.map(([tools, purpose], index) => (
+                <article className="stack-item" key={tools}>
+                  <span className="stack-number">{String(index + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3>{tools}</h3>
+                    <p>{purpose}</p>
+                  </div>
+                </article>
               ))}
-            </p>
+            </div>
           </div>
         </section>
 

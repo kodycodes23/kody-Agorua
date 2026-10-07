@@ -64,7 +64,7 @@ export const work: Project[] = [
       demo: "https://yorecord.com/view?uid=23848650-55b1-46b1-b77b-bb0cf2604ae4",
       github: "https://github.com/kodycodes23/koya-support-agent",
     },
-    image: "/projects/relaypay-voice-support-v2.png",
+    image: "/projects/relaypay-voice-support-v2.webp",
     accent: "#18A999",
   },
   {
@@ -78,7 +78,7 @@ export const work: Project[] = [
       demo: "https://yorecord.com/view?uid=da565625-f384-4c15-84ca-b1c67c69b554",
       github: "https://github.com/kodycodes23/Koya-Proposal-Generator",
     },
-    image: "/projects/koya-proposal-generator-v2.png",
+    image: "/projects/koya-proposal-generator-v2.webp",
     accent: "#D08A42",
   },
   {
@@ -92,7 +92,7 @@ export const work: Project[] = [
       demo: "https://yorecord.com/view?uid=abbaab2b-a05f-40b2-9db1-162b3daab4ed",
       github: "https://github.com/kodycodes23/content_generator",
     },
-    image: "/projects/koya-content.png",
+    image: "/projects/koya-content.webp",
     accent: "#D45D79",
   },
   {
@@ -106,7 +106,7 @@ export const work: Project[] = [
       demo: "https://yorecord.com/view?uid=437fa97f-b895-4ec4-b283-b9e9f69e7ef5",
       github: "https://github.com/kodycodes23/Radar-Lead-Generator",
     },
-    image: "/projects/radar-lead-generator-wide.png",
+    image: "/projects/radar-lead-generator-wide.webp",
     accent: "#4B91A8",
   },
   {
@@ -116,7 +116,7 @@ export const work: Project[] = [
       "An AI-powered telemedicine assistant that delivers personalized, doctor-verified health insights using wearable data — seamlessly integrated with hospitals and insurers.",
     tools: ["React", "Vite", "TypeScript", "HTML/CSS"],
     url: "https://quantm-frontend.vercel.app/",
-    image: "/projects/QuantumProject.png",
+    image: "/projects/QuantumProject.webp",
     accent: "#7C9CF5",
   },
   {
@@ -126,7 +126,7 @@ export const work: Project[] = [
       "GECU is a fictional, educational banking system built to simulate real-world financial operations such as deposits, transfers, loans, and investments.",
     tools: ["HTML/CSS", "TypeScript", "React", "Django"],
     url: "https://grandelitecreditunion.com/#",
-    image: "/projects/GECUBanking.png",
+    image: "/projects/GECUBanking.webp",
     accent: "#12A36B",
   },
   {
@@ -136,7 +136,7 @@ export const work: Project[] = [
       "GECU Logistics is a real-time parcel tracking tool that gives users accurate updates from dispatch to delivery. Try the demo with tracking number ABD112233445566 to see how it works.",
     tools: ["HTML/CSS", "TypeScript", "React", "Java (Spring Boot)"],
     url: "https://packagetracker-u8n9.onrender.com/",
-    image: "/projects/GECULogistics.png",
+    image: "/projects/GECULogistics.webp",
     accent: "#2563EB",
   },
   {
@@ -146,7 +146,7 @@ export const work: Project[] = [
       "MovieBox is a real-time movie discovery app built with Angular, using the TMDB API to showcase trending and newly released films with a sleek, responsive UI.",
     tools: ["Angular", "TypeScript", "API", "HTML/CSS"],
     url: "https://movie-box-liart.vercel.app/home",
-    image: "/projects/moviebox.png",
+    image: "/projects/moviebox.webp",
     accent: "#E11D48",
   },
   {
@@ -156,7 +156,7 @@ export const work: Project[] = [
       "Blockchain Based Voting System is a decentralized voting system that allows users to vote on a set of candidates. It is built using Hyperledger Besu and React.",
     tools: ["Solidity", "Hyperledger Besu", "React", "HTML/CSS"],
     url: "https://blockchain-based-voting-system-rouge.vercel.app/",
-    image: "/projects/BlockChainProject.png",
+    image: "/projects/BlockChainProject.webp",
     accent: "#C026D3",
   },
   {
@@ -166,7 +166,7 @@ export const work: Project[] = [
       "A rule-based lead qualification tool that cleans uploaded CSV data, deduplicates records, and automatically scores and classifies leads into Contact Now, Nurture, or Disqualify tiers.",
     tools: ["JavaScript", "FastAPI", "React", "HTML/CSS"],
     url: "https://koya-frontend-zewr.vercel.app/",
-    image: "/projects/lead.png",
+    image: "/projects/lead.webp",
     accent: "#6366F1",
   },
   {
@@ -176,7 +176,7 @@ export const work: Project[] = [
       "A Docker-powered local deployment orchestrator using Express, React, and Caddy to clone Git repositories, build applications, and dynamically manage reverse-proxy routing via localhost domains.",
     tools: ["JavaScript", "Docker", "React", "HTML/CSS"],
     url: "https://github.com/kodycodes23/shipyard.git",
-    image: "/projects/brimble.png",
+    image: "/projects/brimble.webp",
     accent: "#2F9E8F",
   },
 ];
